@@ -136,7 +136,7 @@ DA3 因此将目标表述为从任意数量、可有可无相机 pose 的图像�
 
 ### 1. 总体流程与最终输出
 
-![DepthAnything_pipeline|700](/assets/DepthAnything_f2.png)
+![DepthAnything_pipeline|700](../assets/DepthAnything_f2.png)
 
 > 任意数量 RGB 图像，可选相机 pose  
 > $\downarrow$  
@@ -201,7 +201,7 @@ $$
 
 ### 5. Dual-DPT：共享几何表征，分开任务解码
 
-![DepthAnything_Dual-DPT Head](/assets/DepthAnything_f3.png)
+![DepthAnything_Dual-DPT Head](../assets/DepthAnything_f3.png)
 
 Dual-DPT 的结构分成三段：
 

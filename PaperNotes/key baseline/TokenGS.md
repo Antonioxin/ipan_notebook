@@ -143,17 +143,17 @@ $$\mathbf x\times\mathbf d
 
 ### 2. Directly Regressing Gaussian Means
 前面提到，传统的重建方式往往采用 pixel-aligned 策略，但这种策略在视图有限的情况下往往只能保证可见表面的准确重建，而无法完整复原场景结构。见下图：
-![TokenGS_f3](/assets/TokenGS_f3.png)
+![TokenGS_f3](../assets/TokenGS_f3.png)
 
 直接回归高斯均值能够解耦高斯体与相机射线，这能够带来以下好处：
 1. 模型能够支持外推与场景补全
-![TokenGS_f6](/assets/TokenGS_f6.png)
+![TokenGS_f6](../assets/TokenGS_f6.png)
 
 2. 提高模型对相机位姿噪声的鲁棒性
-![TokenGS_f7](/assets/TokenGS_f7.png)
+![TokenGS_f7](../assets/TokenGS_f7.png)
 
 3. 消除深度预测网络中常见的尖刺状伪影
-![TokenGS_f5](/assets/TokenGS_f5.png)
+![TokenGS_f5](../assets/TokenGS_f5.png)
 
 
 #### 2.1 零梯度问题
@@ -161,7 +161,7 @@ $$\mathbf x\times\mathbf d
 
 #### 2.2 Visibility Loss 
 
-![TokenGS_VL](/assets/TokenGS_VL.png)
+![TokenGS_VL](../assets/TokenGS_VL.png)
 
 为了消除零梯度问题，文章提出了一种新的损失函数——Visibility Loss 可见性损失。
 以较为柔性的方式约束高斯粒子，使其至少在一个监督视图中保持可见。具体而言，文章将高斯质心
@@ -212,7 +212,7 @@ $$
 
 ### 3. Decoding Learnable Gaussian Tokens
 
-![TokenGS_pipeline](/assets/TokenGS_pipeline.png)
+![TokenGS_pipeline](../assets/TokenGS_pipeline.png)
 
 #### 3.1 Model Architecture
 

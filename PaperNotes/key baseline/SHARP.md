@@ -85,7 +85,7 @@ $$
 
 论文以 Figure 5 作不确定性诊断：分别对原图和其水平翻转图做深度预测，再将后者翻回，计算两张预测的相对绝对误差。物体边界、枝叶等复杂区域的不一致更明显。
 
-![Ambiguity in depth estimation](/assets/Ambiguity_in_depth_estimation.png)
+![Ambiguity in depth estimation](../assets/Ambiguity_in_depth_estimation.png)
 
 **证据边界**：翻转预测不一致支持“模型在这些区域不稳定”，但并不能严格证明真实分布必然多峰，也不能直接证明模型确实输出了所有可能尺度的平均值；不一致还可能受到网络非完全 flip-equivariance 或数据偏置影响。
 
@@ -132,7 +132,7 @@ $$
 
 ## 4. 模型架构的细节
 
-![SHARP Pipeline](/assets/SHARP-pipeline.png)
+![SHARP Pipeline](../assets/SHARP-pipeline.png)
 
 ### 4.1 总体数据流
 

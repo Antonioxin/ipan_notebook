@@ -186,7 +186,7 @@ register token 与 camera token 的基础参数在视图间共享。camera token
 
 ### 4. Looped Transformer Block
 
-![DéjàView_pipeline|576](DéjàView_f2.png)
+![DéjàView_pipeline|576](../assets/DéjàView_f2.png)
 
 每个循环 block 按 VGGT 风格顺序包含两个 attention 子块：
 
@@ -217,7 +217,7 @@ decoder 的第一个 transformer block 是 pre-norm，起始 LayerNorm 会吸收
 
 ### 6. Decoder、相机恢复与两阶段训练
 
-![DéjàView_pipeline](DéjàView_f2.png)
+![DéjàView_pipeline](../assets/DéjàView_f2.png)
 
 最终 $z_K$ 进入两条并行 decoder branch；每条由浅层 Transformer 与输出 head 组成。decoder transformer 延续 pre-norm Attn + MLP，但不使用 LayerScale：
 

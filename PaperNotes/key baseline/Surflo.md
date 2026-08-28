@@ -185,7 +185,7 @@ $$
 
 输出为场景表面 $\mathcal S\subset\mathbb R^3$ 上的带法线点。系统先计算固定大小的 $z$，再对每个查询 $x_t\in\mathbb R^3\times\mathbb S^2$ 和时间 $t\in[0,1]$ 预测速度。最后由 guided ODE solver 积分得到一致表面。
 
-![Surflo_pipeline](/assets/Surflo_f2.png)
+![Surflo_pipeline](../assets/Surflo_f2.png)
 
 ### 2. Encoder：从图像到固定大小的全局状态
 
@@ -230,7 +230,7 @@ $$
 
 目标分布 $p_1$ 是训练网格表面上采样得到的带法线点。源分布 $p_0$ 的坐标部分不是简单的全局高斯 $\mathcal N(0,I_3)$，而是以当前场景 VGGT pointmap 为中心的高斯混合。
 
-![Surflo_f3](/assets/Surflo_f3.png)
+![Surflo_f3](../assets/Surflo_f3.png)
 
 设 $\{q_i\}$ 为由 VGGT 预测深度、结合估计相机参数反投影得到的世界点。每个初始位置可写为：
 

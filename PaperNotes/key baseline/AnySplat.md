@@ -2,7 +2,7 @@
 
 arXiv：[2505.23716](https://arxiv.org/abs/2505.23716)；项目页：[AnySplat](https://city-super.github.io/anysplat/)；代码：[InternRobotics/AnySplat](https://github.com/InternRobotics/AnySplat)；DOI：[10.1145/3763326](https://doi.org/10.1145/3763326)
 
-![AnySplat_hero](/assets/AnySplat_f1.png)
+![AnySplat_hero](../assets/AnySplat_f1.png)
 
 论文：[Jiang 等 - 2025 - AnySplat Feed-forward 3D Gaussian Splatting from Unconstrained Views.pdf](/Users/pro/Desktop/🤖.ai/暑期论文阅读/key_baseline/Jiang%20等%20-%202025%20-%20AnySplat%20Feed-forward%203D%20Gaussian%20Splatting%20from%20Unconstrained%20Views.pdf)
 
@@ -106,7 +106,7 @@ AnySplat 的目标不是重新定义 SfM、MVS 或 3DGS，而是把几何 founda
 
 ## Method
 
-![AnySplat_pipeline](/assets/AnySplat_f2_pipeline.png)
+![AnySplat_pipeline](../assets/AnySplat_f2_pipeline.png)
 
 ### 1. 总体流程与输出接口
 
@@ -228,7 +228,7 @@ $$
 
 这是一种可微的、learned weighted consolidation，而不是单纯基于距离的硬去重。它通过训练学习“同一局部空间中哪一个预测更可信”，从而减少冗余并保留梯度。
 
-![AnySplat_voxel_efficiency|700](/assets/AnySplat_f5_voxel_efficiency.png)
+![AnySplat_voxel_efficiency|700](../assets/AnySplat_f5_voxel_efficiency.png)
 
 Figure 5 给出论文最直接的效率证据：未做 voxelization 时，Gaussian 数量和渲染显存随输入视图数近似线性增长；使用该模块后，增长次线性并趋于平台。论文贡献中概括为跨场景可去除约 $30\%$ 到 $70\%$ 的冗余 primitive。这个百分比是整体主张，不应误读为每个实验、每个视图数都固定节省相同比例。
 
@@ -459,7 +459,7 @@ Differentiable voxelization 让输入图增多时 primitive 和显存增长变�
 
 ### 7. 失败案例与严格边界
 
-![AnySplat_failure_cases](/assets/AnySplat_f10_failure_cases.png)
+![AnySplat_failure_cases](../assets/AnySplat_f10_failure_cases.png)
 
 论文明确报告的失败条件包括：
 

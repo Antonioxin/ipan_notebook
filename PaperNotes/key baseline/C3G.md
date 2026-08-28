@@ -154,7 +154,7 @@ C3G 前馈预测
 
 C3G 的第一个核心模块是 **C3G-G（Compact 3D Gaussian Decoder）**。
 
-![C3G-G_pipeline](/assets/C3G-G.png)
+![C3G-G_pipeline](../assets/C3G-G.png)
 
 #### 4.1 从多视图图像提取具有几何先验的特征
 
@@ -244,7 +244,7 @@ N = 2048
 
 C3G 的第二个核心模块是 **C3G-F（Compact 3D Feature Decoder）**。它要解决的问题是：如何把任意视觉编码器产生的二维特征，高效地聚合并附着到 C3G-G 生成的紧凑 Gaussians 上。
 
-![C3G-F_training_schema](/assets/C3G-F_training_schema.png)
+![C3G-F_training_schema](../assets/C3G-F_training_schema.png)
 
 #### 5.1 传统 feature lifting 的两个难点
 

@@ -2,7 +2,7 @@
 
 arXiv：[2510.10726](https://arxiv.org/abs/2510.10726)；项目页：[HunyuanWorld](https://3d-models.hunyuan.tencent.com/world/)；代码：[Tencent-Hunyuan/HunyuanWorld-Mirror](https://github.com/Tencent-Hunyuan/HunyuanWorld-Mirror)
 
-![WorldMirror_hero](/assets/WorldMirror_f1.png)
+![WorldMirror_hero](../assets/WorldMirror_f1.png)
 
 论文：[Liu 等 - 2025 - WorldMirror Universal 3D World Reconstruction with Any-Prior Prompting.pdf](/Users/pro/Desktop/🤖.ai/暑期论文阅读/key_baseline/Liu%20等%20-%202025%20-%20WorldMirror%20Universal%203D%20World%20Reconstruction%20with%20Any-Prior%20Prompting.pdf)
 
@@ -118,7 +118,7 @@ $$
 
 ## Method
 
-![WorldMirror_pipeline](/assets/WorldMirror_f2.png)
+![WorldMirror_pipeline](../assets/WorldMirror_f2.png)
 
 ### 1. 总体流程与接口
 
@@ -517,7 +517,7 @@ NVS 使用 PSNR（高更好）、SSIM（高更好）和 LPIPS（低更好）。�
 
 论文的 Figure 5 与 Figure 6 给出了直观和定量证据。
 
-![WorldMirror_Figure5_priors_effect|1200](/assets/WorldMirror_f5_priors_effect.png)
+![WorldMirror_Figure5_priors_effect|1200](../assets/WorldMirror_f5_priors_effect.png)
 
 #### 2.1 读图：每种先验主要在纠正什么
 
