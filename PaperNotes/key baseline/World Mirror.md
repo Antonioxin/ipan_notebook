@@ -246,11 +246,11 @@ $$
 令视觉 Transformer 输出为 $T_i^{\mathrm{out}}$，图像 token 子集记为 $\hat T_i^{\mathrm{img}}$，相机 token 子集记为 $\hat T_i^{\mathrm{cam}}$。论文用 DPT heads 回归稠密几何，用 Transformer 回归相机：
 
 $$
-\hat P_i=\operatorname{DPT}_p(\hat T_i^{\mathrm{img}}),
+\hat P_i=\mathrm{DPT}_p(\hat T_i^{\mathrm{img}}),
 \qquad
-\hat D_i=\operatorname{DPT}_d(\hat T_i^{\mathrm{img}}),
+\hat D_i=\mathrm{DPT}_d(\hat T_i^{\mathrm{img}}),
 \qquad
-\hat E_i=\operatorname{Transformer}(\hat T_i^{\mathrm{cam}}).
+\hat E_i=\mathrm{Transformer}(\hat T_i^{\mathrm{cam}}).
 \tag{2}
 $$
 
@@ -263,8 +263,8 @@ $$
 $$
 \hat N_i
 =
-\frac{\operatorname{DPT}_n(\hat T_i^{\mathrm{img}})}
-{\left\|\operatorname{DPT}_n(\hat T_i^{\mathrm{img}})\right\|_2}.
+\frac{\mathrm{DPT}_n(\hat T_i^{\mathrm{img}})}
+{\left\|\mathrm{DPT}_n(\hat T_i^{\mathrm{img}})\right\|_2}.
 \tag{3}
 $$
 
@@ -282,7 +282,7 @@ Gaussian head 并非先使用普通 depth head 的 $\hat D_i$，再把它改造�
 $$
 \hat D_g,F_g
 =
-\operatorname{DPT}_g(\hat T^{\mathrm{img}}).
+\mathrm{DPT}_g(\hat T^{\mathrm{img}}).
 \tag{4}
 $$
 
@@ -291,7 +291,7 @@ $$
 $$
 \hat G
 =
-\operatorname{Conv}(F_g,I).
+\mathrm{Conv}(F_g,I).
 $$
 
 预测内容包括：
@@ -401,7 +401,7 @@ $$
 \left\|I_i[M_i]-\hat I_i[M_i]\right\|
 +
 \lambda_{\mathrm{lpips}}
-\operatorname{LPIPS}(I_i[M_i],\hat I_i[M_i]).
+\mathrm{LPIPS}(I_i[M_i],\hat I_i[M_i]).
 \tag{9}
 $$
 

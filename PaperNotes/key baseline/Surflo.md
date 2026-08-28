@@ -21,9 +21,9 @@ Q=z_pW_Q,\qquad K_X=XW_K,\qquad V_X=XW_V,
 $$
 
 $$
-\operatorname{CrossAttn}(z_p,X)
+\mathrm{CrossAttn}(z_p,X)
 =
-\operatorname{softmax}
+\mathrm{softmax}
 \left(\frac{QK_X^\top}{\sqrt d}\right)V_X.
 $$
 
@@ -66,7 +66,7 @@ Flow matching 学习的不是一个固定点坐标，而是一个随时间变化
 
 $$
 x_0\sim p_0,\qquad x_1\sim p_1,\qquad
-t\sim\operatorname{LogitNormal}(1,1.6).
+t\sim\mathrm{LogitNormal}(1,1.6).
 $$
 
 然后构造从 $x_0$ 到 $x_1$ 的线性插值路径：
@@ -106,23 +106,23 @@ $$
 普通 LayerNorm 只依据当前 token $x$ 做归一化；Ada-LN 还根据条件 $c$ 动态生成缩放与平移：
 
 $$
-\operatorname{AdaLN}(x,c)
+\mathrm{AdaLN}(x,c)
 =
-(1+\operatorname{scale}(c))\odot\operatorname{LN}(x)
-+\operatorname{shift}(c).
+(1+\mathrm{scale}(c))\odot\mathrm{LN}(x)
++\mathrm{shift}(c).
 $$
 
 Surflo 的条件为：
 
 $$
-c=\tau(t)+\operatorname{MLP}_{\mathrm{cam}}(z_c),
+c=\tau(t)+\mathrm{MLP}_{\mathrm{cam}}(z_c),
 $$
 
 其中 $\tau(t)$ 是 flow 时间编码，$z_c$ 是由 camera token 汇总而来的相机/世界坐标条件。实际 block 还会预测 gate，典型残差形式为：
 
 $$
-y=x+\operatorname{gate}(c)\odot
-F\bigl(\operatorname{AdaLN}(x,c)\bigr).
+y=x+\mathrm{gate}(c)\odot
+F\bigl(\mathrm{AdaLN}(x,c)\bigr).
 $$
 
 它让 decoder 在不同积分阶段采取不同策略：早期大范围地从噪声靠近几何，后期细调表面；同时根据当前 VGGT 坐标系解释点的位置。论文将调制参数的输出投影零初始化，使训练初始时 block 近似恒等映射，从而提高稳定性。
@@ -207,9 +207,9 @@ VGGT patch token 不是三维坐标本身，而是局部外观、跨视图对应
 $$
 z_p^{(l+1)}
 =
-\operatorname{SelfAttn}^{L_s}
+\mathrm{SelfAttn}^{L_s}
 \Bigl(
-\operatorname{CrossAttn}
+\mathrm{CrossAttn}
 \bigl(z_p^{(l)},\{T_n+\gamma(p_n)\}_n\bigr)
 \Bigr).
 $$
@@ -248,7 +248,7 @@ $$
 附录的实现使用场景归一化坐标下 $\sigma_s=0.1$。法线独立地从单位球面均匀采样：
 
 $$
-n\sim\operatorname{Uniform}(\mathbb S^2).
+n\sim\mathrm{Uniform}(\mathbb S^2).
 $$
 
 **这种设计的原因是**：
@@ -274,7 +274,7 @@ decoder 输入 Fourier-encoded query point $\gamma(x_t)$，通过 cross-attentio
 训练时随机采样时间：
 
 $$
-t=\operatorname{sigmoid}(y),\qquad
+t=\mathrm{sigmoid}(y),\qquad
 y\sim\mathcal N(1.0,1.6^2).
 $$
 
@@ -314,7 +314,7 @@ $$
 \frac1N\sum_{n=1}^{N}
 \left[
 \lambda\|\hat I_n(t)-I_n\|_1
-+(1-\lambda)\operatorname{DSSIM}(\hat I_n(t),I_n)
++(1-\lambda)\mathrm{DSSIM}(\hat I_n(t),I_n)
 \right],
 $$
 

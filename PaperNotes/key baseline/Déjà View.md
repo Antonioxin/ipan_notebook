@@ -57,7 +57,7 @@ $$
 z_{k+1}=f_\theta(z_k,t_k,t_{k+1}).
 $$
 
-因此模型看到的是“本次从时间 $t_k$ 走到 $t_{k+1}$ 的区间”，而不是某个绝对层号。若 $K=8$，每次是较大的 $1/8$ 步；若 $K=16$，每次是较小的 $1/16$ 步。训练时从 $[8,16]$ 中按 $\operatorname{Beta}(2,1)$ 采样 $K$，使一个 checkpoint 可在该范围内以不同计算预算运行。
+因此模型看到的是“本次从时间 $t_k$ 走到 $t_{k+1}$ 的区间”，而不是某个绝对层号。若 $K=8$，每次是较大的 $1/8$ 步；若 $K=16$，每次是较小的 $1/16$ 步。训练时从 $[8,16]$ 中按 $\mathrm{Beta}(2,1)$ 采样 $K$，使一个 checkpoint 可在该范围内以不同计算预算运行。
 
 这不是任意步数都有效的 ODE solver：实验显示超出训练范围很远时性能会退化。它应被理解为“在训练过的预算区间内可调”的循环模型，而非理论上无限可外推的迭代器。
 
@@ -66,9 +66,9 @@ $$
 一个标准 pre-norm Transformer 子块先归一化、再计算分支、最后通过残差加回：
 
 $$
-x' = x+\operatorname{Attn}(\operatorname{LN}(x)),
+x' = x+\mathrm{Attn}(\mathrm{LN}(x)),
 \qquad
-x'' = x'+\operatorname{MLP}(\operatorname{LN}(x')).
+x'' = x'+\mathrm{MLP}(\mathrm{LN}(x')).
 $$
 
 其中 Attention 在 token 间交换信息，MLP 对每个 token 的通道做非线性变换；“pre-norm”表示 LayerNorm 位于分支输入而非残差相加之后。残差通路保留旧状态，使 block 只需学习本轮应写入的更新。
@@ -78,9 +78,9 @@ DéjàView 在此基础上使用 LayerScale，并按时间区间产生三组**�
 $$
 \begin{aligned}
 z' &= z_k+\mathbf s_{\mathrm{attn}}\odot
-\operatorname{LS}_1\bigl(\operatorname{Attn}(\operatorname{LN}_1(z_k))\bigr),\\
+\mathrm{LS}_1\bigl(\mathrm{Attn}(\mathrm{LN}_1(z_k))\bigr),\\
 z'' &= z'+\mathbf s_{\mathrm{mlp}}\odot
-\operatorname{LS}_2\bigl(\operatorname{MLP}(\operatorname{LN}_2(z'))\bigr),\\
+\mathrm{LS}_2\bigl(\mathrm{MLP}(\mathrm{LN}_2(z'))\bigr),\\
 z_{k+1} &= \mathbf s_{\mathrm{out}}\odot z''.
 \end{aligned}
 $$
@@ -94,7 +94,7 @@ $$
 这些缩放由零初始化 MLP 产生：
 
 $$
-\mathbf s=1+\operatorname{MLP}(\gamma(t_k,t_{k+1})),
+\mathbf s=1+\mathrm{MLP}(\gamma(t_k,t_{k+1})),
 $$
 
 其中 $\gamma$ 拼接两个端点的 sinusoidal embedding。零初始化使训练开始时 $\mathbf s\approx1$，模型退化为稳定的普通残差 block；之后才学习早期大步修正、后期细化时不同分支应有的更新强度。

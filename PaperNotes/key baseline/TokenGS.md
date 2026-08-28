@@ -239,13 +239,13 @@ $$
 第 $v$ 个视图的第 $k$ 个 RGB patch $I_{v,k}\in\mathbb R^{p\times p\times3}$ 被线性投影为外观 embedding：
 
 $$
-x_{v,k}=\operatorname{Linear}(I_{v,k}).
+x_{v,k}=\mathrm{Linear}(I_{v,k}).
 $$
 
 同一位置的 Plücker patch $P_{v,k}\in\mathbb R^{p\times p\times6}$ 被投影为几何 embedding：
 
 $$
-s_{v,k}=\operatorname{Linear}(P_{v,k}).
+s_{v,k}=\mathrm{Linear}(P_{v,k}).
 $$
 
 二者相加，得到 encoder 输入 token：
@@ -303,7 +303,7 @@ $$
 对于想重建的目标时刻 $t$，只给 dynamic token 加入时间条件。先计算正弦时间编码 $τ(t)$，再经线性层映射到 token 维度：
 
 $$
-\widetilde T^D_j(t)=T^D_j+\operatorname{Linear}(\tau(t)).
+\widetilde T^D_j(t)=T^D_j+\mathrm{Linear}(\tau(t)).
 $$
 
 因此，static token 在所有时刻保持相同，而同一个 dynamic token 会随目标时间获得不同的表示。论文将这种按指定时间重建的设置称为 **bullet-time reconstruction**。

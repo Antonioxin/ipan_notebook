@@ -180,11 +180,11 @@ $$
 $$
 \{\mu_g\}
 =
-\operatorname{proj}(\{p_i\},\{D_i\}).
+\mathrm{proj}(\{p_i\},\{D_i\}).
 \tag{6}
 $$
 
-从几何角度看，这一步实质上是式 (1) 的反投影。论文写作 $\operatorname{proj}$，但它的作用是把像素及其深度 lift 到三维。
+从几何角度看，这一步实质上是式 (1) 的反投影。论文写作 $\mathrm{proj}$，但它的作用是把像素及其深度 lift 到三维。
 
 这带来一个风险：若每张 $H\times W$ 图都产生一个 Gaussian，则 primitive 数约为
 
@@ -305,9 +305,9 @@ RGB rendering loss 为
 $$
 L_{\mathrm{rgb}}
 =
-\operatorname{MSE}(I,\hat I)
+\mathrm{MSE}(I,\hat I)
 +
-\lambda_1\operatorname{Perceptual}(I,\hat I),
+\lambda_1\mathrm{Perceptual}(I,\hat I),
 \tag{13}
 $$
 
