@@ -218,7 +218,6 @@ T_i^{\mathrm{img}}+T_i^{\mathrm{depth}}
 \qquad
 T_i^{\mathrm{prompt}}
 \in\mathbb R^{(1+1+H_pW_p)\times D}.
-\tag{1}
 $$
 
 这里的方括号表示 token 序列拼接，而不是逐元素相加。这个设计将“全局几何条件”和“局部几何测量”放进同一个 Transformer 语境中，同时保留各自正确的结构。
@@ -251,7 +250,6 @@ $$
 \hat D_i=\mathrm{DPT}_d(\hat T_i^{\mathrm{img}}),
 \qquad
 \hat E_i=\mathrm{Transformer}(\hat T_i^{\mathrm{cam}}).
-\tag{2}
 $$
 
 注意：$T_i^{\mathrm{cam}}$ 在有 pose 输入时承载显式条件，在无 pose 时是置零条件槽位；经过与图像 token 的 attention 后，它仍能成为用于预测 $\hat E_i$ 的全局汇聚位置。这使“给定 pose”和“预测 pose”能共享同一接口。
@@ -265,7 +263,6 @@ $$
 =
 \frac{\mathrm{DPT}_n(\hat T_i^{\mathrm{img}})}
 {\left\|\mathrm{DPT}_n(\hat T_i^{\mathrm{img}})\right\|_2}.
-\tag{3}
 $$
 
 很多数据集没有人工标注法线。论文将两类监督混用：
@@ -283,7 +280,6 @@ $$
 \hat D_g,F_g
 =
 \mathrm{DPT}_g(\hat T^{\mathrm{img}}).
-\tag{4}
 $$
 
 训练时，$\hat D_g$ 结合真值相机 $K,[R\mid t]$ 反投影成 Gaussian centers $\mu_g$。其余属性由 $F_g$ 与从原图提取的外观特征共同输入卷积网络预测：
@@ -342,7 +338,6 @@ $$
 +\lambda_{\mathrm{cam}}\mathcal L_{\mathrm{cam}}
 +\lambda_{\mathrm{normal}}\mathcal L_{\mathrm{normal}}
 +\lambda_{\mathrm{3dgs}}\mathcal L_{\mathrm{3dgs}}.
-\tag{5}
 $$
 
 #### point、depth 与 camera
@@ -361,7 +356,6 @@ $$
 \Sigma_i^P\odot(\nabla\hat P_i-\nabla P_i)
 \right\|
 -\alpha\log\Sigma_i^P.
-\tag{6}
 $$
 
 depth loss 与之类似，只是把 point map 换成深度。梯度项使模型不仅拟合平均位置，也要保留几何边缘和局部变化；不确定性正则避免模型以无限放大“不确定”来逃避误差。
@@ -373,7 +367,6 @@ $$
 =
 \sum_{i=1}^{N}
 \left\|E_i-\hat E_i\right\|_{\epsilon}.
-\tag{7}
 $$
 
 #### normal
@@ -385,7 +378,6 @@ $$
 =
 \sum_{i=1}^{N}
 \alpha_l\left(1-\left|\hat N_i\cdot N_i\right|\right).
-\tag{8}
 $$
 
 对单位向量而言，点积就是夹角余弦。取绝对值意味着法线朝向翻转不会被当作不同表面方向，这适合某些只关心局部平面方向、而不依赖全局朝向的重建情形。
@@ -402,7 +394,6 @@ $$
 +
 \lambda_{\mathrm{lpips}}
 \mathrm{LPIPS}(I_i[M_i],\hat I_i[M_i]).
-\tag{9}
 $$
 
 $M_i$ 表示当前视图中从 context 可见的像素 mask。仅有 RGB 重投影会产生“漂浮高斯”：它可能在少数相机角度看起来对，却不位于可信几何表面上。因此还加入：
@@ -420,7 +411,6 @@ $$
 \lambda_{\mathrm{gsdepth}}\mathcal L_{\mathrm{gsdepth}}
 +
 \lambda_{\mathrm{consis}}\mathcal L_{\mathrm{consis}}.
-\tag{10}
 $$
 
 后者使用 depth confidence 最高的 $30\%$ 像素。它的含义不是“普通 depth head 永远是真值”，而是让两个几何预测分支在最可信区域不互相矛盾。

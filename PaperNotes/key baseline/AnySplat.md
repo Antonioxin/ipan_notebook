@@ -27,7 +27,6 @@ D_i(u,v)K^{-1}\tilde x,
 X_{\mathrm{world}}
 =
 R_iX_{\mathrm{cam}}+t_i.
-\tag{1}
 $$
 
 AnySplat 把每张图的内外参压缩为 $p_i\in\mathbb R^9$，但论文没有在正文展开这九维的具体参数化。它固定第一张图的 pose 为 identity，其他相机都表示在该共享局部坐标系中。
@@ -130,7 +129,6 @@ $$
 \mathcal G
 \xrightarrow{\text{rasterization}}
 \{\hat I_i,\hat D_i\}.
-\tag{3}
 $$
 
 三个输出 head 的职责是：
@@ -157,7 +155,6 @@ $$
 
 $$
 (D_i,C_i^D)=F_D(\hat t_i^I).
-\tag{4}
 $$
 
 其中 $\hat t_i^I$ 是编码后的 image tokens。Gaussian head 把 DPT 特征与浅层 CNN 提取的外观特征相加后，再用回归 CNN 预测其余属性：
@@ -168,7 +165,6 @@ $$
 F_b\left(
 F_d^2(\{\hat t_i^I\})+F_a(\{I_i\})
 \right).
-\tag{5}
 $$
 
 这个双来源设计有直观意义：Transformer 特征偏向几何与跨视图上下文，浅层 CNN 特征保留高频局部外观；只用其中之一都会更容易丢失另一类信息。
@@ -181,7 +177,6 @@ $$
 \{\mu_g\}
 =
 \mathrm{proj}(\{p_i\},\{D_i\}).
-\tag{6}
 $$
 
 从几何角度看，这一步实质上是式 (1) 的反投影。论文写作 $\mathrm{proj}$，但它的作用是把像素及其深度 lift 到三维。
@@ -204,7 +199,6 @@ V_g
 \left\lfloor
 \frac{\mu_g}{\epsilon}
 \right\rfloor.
-\tag{7}
 $$
 
 如果某个 voxel $s$ 中有多个 Gaussian，论文不做不可导的硬选择，而是把每个 Gaussian 的 confidence $C_g$ 转成 softmax 权重：
@@ -214,7 +208,6 @@ w_{g\to s}
 =
 \frac{\exp(C_g)}
 {\sum_{h:V_h=s}\exp(C_h)}.
-\tag{8}
 $$
 
 任意属性 $a_g$ 的 voxel 级聚合为
@@ -223,7 +216,6 @@ $$
 \bar a_s
 =
 \sum_{g:V_g=s}w_{g\to s}a_g.
-\tag{9}
 $$
 
 这是一种可微的、learned weighted consolidation，而不是单纯基于距离的硬去重。它通过训练学习“同一局部空间中哪一个预测更可信”，从而减少冗余并保留梯度。
@@ -253,7 +245,6 @@ L_p
 \left\|
 \tilde p_i-p_i
 \right\|_{\epsilon},
-\tag{10}
 $$
 
 $$
@@ -263,7 +254,6 @@ L_d
 \left(
 \tilde D_i[M]-\hat D_i[M]
 \right)^2.
-\tag{11}
 $$
 
 $L_p$ 使用 Huber loss。它在小残差时像平方误差、在大残差时近似线性，因此单个 teacher pose 异常不会像纯 $\ell_2$ 一样产生过大的梯度。
@@ -287,7 +277,6 @@ L_g
 \left(
 D_i[M]-\hat D_i[M]
 \right)^2.
-\tag{12}
 $$
 
 它解决的是 representation mismatch：
@@ -308,7 +297,6 @@ L_{\mathrm{rgb}}
 \mathrm{MSE}(I,\hat I)
 +
 \lambda_1\mathrm{Perceptual}(I,\hat I),
-\tag{13}
 $$
 
 总目标为
@@ -323,7 +311,6 @@ L_{\mathrm{rgb}}
 \lambda_3L_p
 +
 \lambda_4L_d.
-\tag{14}
 $$
 
 论文实现取
