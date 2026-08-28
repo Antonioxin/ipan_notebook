@@ -1,0 +1,256 @@
+{
+  "main": {
+    "id": "122887156f273439",
+    "type": "split",
+    "children": [
+      {
+        "id": "96622cfd0571c2bb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a41b7438c3ccd2b7",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "assets/WorldMirror_f2.png"
+              },
+              "icon": "lucide-image",
+              "title": "WorldMirror_f2"
+            }
+          },
+          {
+            "id": "2e830a767ef5b691",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "key baseline/World Mirror.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "World Mirror"
+            }
+          },
+          {
+            "id": "d14a32eb3e5d48cf",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "assets/AnySplat_f2_pipeline.png"
+              },
+              "icon": "lucide-image",
+              "title": "AnySplat_f2_pipeline"
+            }
+          },
+          {
+            "id": "8f933dfb3f1c907e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "key baseline/AnySplat.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AnySplat"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "464ad46615b8b308",
+    "type": "split",
+    "children": [
+      {
+        "id": "66e29e14ea4f1324",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ee2df08fc2347226",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "0debb7dc47b79807",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "8f0ba111f4df7b1e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "72ba49111fec47f6",
+    "type": "split",
+    "children": [
+      {
+        "id": "6b7d109f81729422",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1844d2e7941816c5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "key baseline/World Mirror.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "e591e5a5dc5d0f3a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "key baseline/World Mirror.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "20b6c6c0d0780874",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "9b791213a6a16786",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "616dc3be4dbe3a88",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "key baseline/AnySplat.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "8f933dfb3f1c907e",
+  "lastOpenFiles": [
+    "assets/AnySplat_f2_pipeline.png",
+    "assets/AnySplat_f10_failure_cases.png",
+    "key baseline/AnySplat.md",
+    "assets/AnySplat_f5_voxel_efficiency.png",
+    "key baseline/Depth Anything.md",
+    "assets/AnySplat_f3_nvs_comparison.png",
+    "assets/AnySplat_f1.png",
+    "key baseline/World Mirror.md",
+    "key baseline/Déjà View.md",
+    "key baseline/C3G.md",
+    "key baseline/SHARP.md",
+    "key baseline/TokenGS.md",
+    "key baseline/Surflo.md",
+    "basic paper/DPT.md",
+    "额度说明.md",
+    "assets/WorldMirror_f5_priors_effect.png",
+    "assets/WorldMirror_f2.png",
+    "assets/WorldMirror_f1.png",
+    "basic paper/U-Net.md",
+    "basic paper/RefineNet.md",
+    "basic paper/FPN.md",
+    "basic paper/FCN.md",
+    "basic paper"
+  ]
+}

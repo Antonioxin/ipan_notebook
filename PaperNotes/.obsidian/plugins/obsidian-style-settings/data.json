@@ -1,0 +1,8 @@
+{
+  "Editor@@h1-size": "1.7em",
+  "Editor@@h2-size": "1.5em",
+  "obsidian-velocity@@enable-special-text": true,
+  "obsidian-velocity@@enable-special-code": true,
+  "obsidian-velocity@@color-highlight-rgb": "var(--highlight-green-rgb)",
+  "obsidian-velocity@@theme-paint-dark": "velocity-gray"
+}
