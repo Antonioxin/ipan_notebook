@@ -1,5 +1,7 @@
 # TokenGS: Decoupling 3D Gaussian Prediction from Pixels with Learnable Tokens
 
+arXiv：[2604.15239](https://arxiv.org/abs/2604.15239)；项目页：[TokenGS](https://research.nvidia.com/labs/toronto-ai/tokengs/)；代码：[nv-tlabs/TokenGS](https://github.com/nv-tlabs/TokenGS)
+
 ## 开始前复习一下知识点
 
 ### 1. Volume Rendering（体渲染）

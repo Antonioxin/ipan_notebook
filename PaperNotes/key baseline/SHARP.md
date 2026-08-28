@@ -1,5 +1,7 @@
 # Sharp Monocular View Synthesis in Less Than a Second
 
+arXiv：[2512.10685](https://arxiv.org/abs/2512.10685)；项目页：[SHARP](https://apple.github.io/ml-sharp/)；代码：[apple/ml-sharp](https://github.com/apple/ml-sharp)
+
 ## 1. Introduction
 
 ### 1.1 领域背景：从新视图合成到单图新视图合成

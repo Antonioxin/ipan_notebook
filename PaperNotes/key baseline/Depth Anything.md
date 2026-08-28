@@ -1,8 +1,8 @@
 # Depth Anything 3: Recovering the Visual Space from Any Views
 
-论文：[Lin 等 - 2025 - Depth Anything 3 Recovering the Visual Space from Any Views.pdf](/Users/pro/Desktop/🤖.ai/暑期论文阅读/key_baseline/Lin%20等%20-%202025%20-%20Depth%20Anything%203%20Recovering%20the%20Visual%20Space%20from%20Any%20Views.pdf)
-
 arXiv：[2511.10647](https://arxiv.org/abs/2511.10647)；项目页：[Depth Anything 3](https://depth-anything-3.github.io/)；代码：[ByteDance-Seed/Depth-Anything-3](https://github.com/ByteDance-Seed/Depth-Anything-3)
+
+论文：[Lin 等 - 2025 - Depth Anything 3 Recovering the Visual Space from Any Views.pdf](/Users/pro/Desktop/🤖.ai/暑期论文阅读/key_baseline/Lin%20等%20-%202025%20-%20Depth%20Anything%203%20Recovering%20the%20Visual%20Space%20from%20Any%20Views.pdf)
 
 ## 开始前复习一下知识点
 

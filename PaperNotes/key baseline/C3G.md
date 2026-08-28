@@ -1,5 +1,7 @@
 # C3G: Learning Compact 3D Representations with 2K Gaussians
 
+arXiv：[2512.04021](https://arxiv.org/abs/2512.04021)；项目页：[C3G](https://cvlab-kaist.github.io/C3G/)；代码：[cvlab-kaist/C3G](https://github.com/cvlab-kaist/C3G)
+
 ## 开始前复习一下知识点
 
 ### 1. 前馈式三维重建（Feed-forward 3D Reconstruction）

@@ -1,10 +1,10 @@
 # AnySplat: Feed-forward 3D Gaussian Splatting from Unconstrained Views
 
+arXiv：[2505.23716](https://arxiv.org/abs/2505.23716)；项目页：[AnySplat](https://city-super.github.io/anysplat/)；代码：[InternRobotics/AnySplat](https://github.com/InternRobotics/AnySplat)；DOI：[10.1145/3763326](https://doi.org/10.1145/3763326)
+
 ![AnySplat_hero](/assets/AnySplat_f1.png)
 
 论文：[Jiang 等 - 2025 - AnySplat Feed-forward 3D Gaussian Splatting from Unconstrained Views.pdf](/Users/pro/Desktop/🤖.ai/暑期论文阅读/key_baseline/Jiang%20等%20-%202025%20-%20AnySplat%20Feed-forward%203D%20Gaussian%20Splatting%20from%20Unconstrained%20Views.pdf)
-
-arXiv：[2505.23716](https://arxiv.org/abs/2505.23716)；代码：[InternRobotics/AnySplat](https://github.com/InternRobotics/AnySplat)；项目页：[city-super.github.io/anysplat](https://city-super.github.io/anysplat/)；DOI：[10.1145/3763326](https://doi.org/10.1145/3763326)
 
 
 ## 开始前复习一下知识点

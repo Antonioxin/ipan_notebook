@@ -1,5 +1,7 @@
 # Surflo: Consistent 3D Surface Flow Model with Global State
 
+arXiv：[2606.13644](https://arxiv.org/abs/2606.13644)；项目页：[Surflo](https://anttwo.github.io/surflo/)；代码：[Anttwo/Surflo](https://github.com/Anttwo/Surflo)
+
 论文：[Surflo.pdf](/Users/pro/Desktop/🤖.ai/暑期论文阅读/key_baseline/Surflo.pdf)
 
 ## 开始前复习一下知识点

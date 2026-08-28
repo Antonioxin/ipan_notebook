@@ -1,8 +1,8 @@
 # Déjà View: Looping Transformers for Multi-View 3D Reconstruction
 
-论文：[Burzio 等 - 2026 - Déjà View Looping Transformers for Multi-View 3D Reconstruction.pdf](/Users/pro/Desktop/🤖.ai/暑期论文阅读/key_baseline/Burzio%20等%20-%202026%20-%20Déjà%20View%20Looping%20Transformers%20for%20Multi-View%203D%20Reconstruction.pdf)
+arXiv：[2605.30215](https://arxiv.org/abs/2605.30215)；项目页：[DéjàView](https://research.nvidia.com/labs/dvl/projects/dvlt/)；代码：[nv-tlabs/dvlt](https://github.com/nv-tlabs/dvlt)
 
-arXiv：[2605.30215](https://arxiv.org/abs/2605.30215)；项目页：[DéjàView](https://research.nvidia.com/labs/dvl/projects/dvlt/)
+论文：[Burzio 等 - 2026 - Déjà View Looping Transformers for Multi-View 3D Reconstruction.pdf](/Users/pro/Desktop/🤖.ai/暑期论文阅读/key_baseline/Burzio%20等%20-%202026%20-%20Déjà%20View%20Looping%20Transformers%20for%20Multi-View%203D%20Reconstruction.pdf)
 
 ## 开始前复习一下知识点
 

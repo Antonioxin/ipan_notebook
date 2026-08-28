@@ -1,10 +1,10 @@
 # WorldMirror: Universal 3D World Reconstruction with Any-Prior Prompting
 
+arXiv：[2510.10726](https://arxiv.org/abs/2510.10726)；项目页：[HunyuanWorld](https://3d-models.hunyuan.tencent.com/world/)；代码：[Tencent-Hunyuan/HunyuanWorld-Mirror](https://github.com/Tencent-Hunyuan/HunyuanWorld-Mirror)
+
 ![WorldMirror_hero](/assets/WorldMirror_f1.png)
 
 论文：[Liu 等 - 2025 - WorldMirror Universal 3D World Reconstruction with Any-Prior Prompting.pdf](/Users/pro/Desktop/🤖.ai/暑期论文阅读/key_baseline/Liu%20等%20-%202025%20-%20WorldMirror%20Universal%203D%20World%20Reconstruction%20with%20Any-Prior%20Prompting.pdf)
-
-arXiv：[2510.10726](https://arxiv.org/abs/2510.10726)；代码：[Tencent-Hunyuan/HunyuanWorld-Mirror](https://github.com/Tencent-Hunyuan/HunyuanWorld-Mirror)
 
 
 ## 开始前复习一下知识点
