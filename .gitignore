@@ -1,0 +1,15 @@
+# Obsidian local settings and workspace state
+.obsidian/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100/
+.Trashes/
+.fseventsd/
+.TemporaryItems/
+.DocumentRevisions-V100/
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
